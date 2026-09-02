@@ -53,7 +53,7 @@ The five classes used are:
 
 ## System Architecture
 
-```text
+'
                     ECG Signal
                         │
                         ▼
@@ -440,7 +440,7 @@ Technologies Used
 - Streamlit
 - Git / GitHub
 Author
-Prashant
+Prashant Kumar Moharana
 Electronics and Communication Engineering
 VIT Chennai
 Disclaimer
