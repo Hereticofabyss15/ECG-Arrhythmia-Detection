@@ -1,0 +1,48 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.vscode/
+.DS_Store
+Thumbs.db
+
+*.log
+
+experiments/inference/test_input.csv
+experiments/inference/test_missing_feature.csv
+experiments/inference/test_all_classes.csv
+experiments/inference/predictions.csv
+
+*.tmp
+
+data/features.csv
+
+# Large datasets and raw ECG recordings
+data/features_mitdb_old.csv
+data/features_mitdb_backup.csv
+data/MIT-BIH/
+databases/
+
+
+# Old / experimental models
+models/*.joblib
+models/*.pkl
+models/*.csv
+models/*.npy
+models/stage1_xgboost.joblib
+models/stage2_xgboost.joblib
+models_improved/
+
+# Keep only the final XGBoost model
+!models/final_xgboost/
+!models/final_xgboost/*.json
+!models/final_xgboost/*.pkl
+!models/final_xgboost/*.csv
+
+
+# Large experiment prediction dumps
+experiments/results/cross_validation/patient_cv_out_of_fold_predictions.csv
+experiments/results/roc_pr_analysis/patient_cv_oof_probabilities.csv
+experiments/results/error_analysis/all_misclassified_samples.csv
