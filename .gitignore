@@ -46,3 +46,36 @@ models_improved/
 experiments/results/cross_validation/patient_cv_out_of_fold_predictions.csv
 experiments/results/roc_pr_analysis/patient_cv_oof_probabilities.csv
 experiments/results/error_analysis/all_misclassified_samples.csv
+
+# Rhythm dataset and generated feature files
+data/ecg-arrhythmia-full.zip
+data/rhythm_features.csv
+data/rhythm_features_balanced.csv
+data/rhythm_train.csv
+data/rhythm_val.csv
+data/rhythm_test.csv
+data/beat_derived_features.csv
+data/multilead_features.csv
+data/multilead_features_3115.csv
+data/rhythm_fusion_features.csv
+data/rhythm_multilead_fusion_features.csv
+data/rhythm_multilead_rf_oof_predictions.csv
+data/rhythm_multilead_rf_5fold_results.csv
+data/rhythm_rf_oof_predictions.csv
+data/rhythm_rf_5fold_results.csv
+
+# Generated analysis outputs
+data/af_afib_*.csv
+data/asvc_*.csv
+data/pca_*.csv
+data/final_rhythm_*.csv
+
+# Temporary Streamlit files
+app/temp/
+
+# Generated plots
+experiments/pca_atrial_plots/
+
+# Keep final rhythm model
+!models/final_rhythm_rf_model.pkl
+!models/final_rhythm_feature_names.json
