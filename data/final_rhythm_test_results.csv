@@ -1,0 +1,2 @@
+model,test_accuracy,test_balanced_accuracy,test_macro_f1
+Random Forest,0.717948717948718,0.7171286425017769,0.719233753783958

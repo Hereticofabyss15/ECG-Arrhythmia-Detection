@@ -1,32 +1,197 @@
+# ==========================================
+# Python
+# ==========================================
+
 venv/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
+
+# ==========================================
+# IDE / OS
+# ==========================================
+
 .vscode/
 .DS_Store
 Thumbs.db
 
+
+# ==========================================
+# Logs / temporary files
+# ==========================================
+
 *.log
+*.tmp
+
+
+# ==========================================
+# Inference test files
+# ==========================================
 
 experiments/inference/test_input.csv
 experiments/inference/test_missing_feature.csv
 experiments/inference/test_all_classes.csv
 experiments/inference/predictions.csv
 
-*.tmp
+
+# ==========================================
+# Large datasets and raw ECG recordings
+# ==========================================
 
 data/features.csv
-
-# Large datasets and raw ECG recordings
 data/features_mitdb_old.csv
 data/features_mitdb_backup.csv
 data/MIT-BIH/
 databases/
 
 
+# ==========================================
+# Rhythm dataset and generated feature files
+# ==========================================
+
+data/ecg-arrhythmia-full.zip
+
+data/rhythm_features.csv
+data/rhythm_features_balanced.csv
+data/rhythm_train.csv
+data/rhythm_val.csv
+data/rhythm_test.csv
+
+data/beat_derived_features.csv
+
+data/multilead_features.csv
+data/multilead_features_3115.csv
+
+data/rhythm_fusion_features.csv
+data/rhythm_multilead_fusion_features.csv
+
+data/rhythm_multilead_rf_oof_predictions.csv
+data/rhythm_multilead_rf_5fold_results.csv
+
+data/rhythm_rf_oof_predictions.csv
+data/rhythm_rf_5fold_results.csv
+
+
+# ==========================================
+# Experimental / intermediate analysis outputs
+# ==========================================
+
+data/atrial_*.csv
+data/af_afib_*.csv
+data/asvc_*.csv
+data/pca_*.csv
+data/failed_records_all_leads.csv
+data/multilead_redundancy_report.csv
+data/multilead_rf_feature_importance.csv
+data/rhythm_feature_importance.csv
+data/rhythm_model_comparison.csv
+data/rhythm_stronger_model_comparison.csv
+
+
+# ==========================================
+# Final rhythm evaluation results
+# ==========================================
+
+!data/final_rhythm_confusion_matrix.csv
+!data/final_rhythm_model_comparison.csv
+!data/final_rhythm_test_results.csv
+
+
+# ==========================================
+# Dataset manifest
+# ==========================================
+
+!data/rhythm_dataset_manifest.csv
+
+
+# ==========================================
+# Old local development scripts
+# ==========================================
+
+build_dataset.py
+build_dataset_old.py
+check_f_annotations.py
+evaluate.py
+train_improved.py
+train_improved_v2.py
+train_models.py
+train_models_backup.py
+visualize.py
+
+experiments/baseline_models.py
+experiments/check_database.py
+experiments/f_class_analysis/
+experiments/imbalance_comparison/
+experiments/xgboost_tuning.py
+
+
+# ==========================================
+# Old generated experiment results
+# ==========================================
+
+results/
+experiments/results/
+
+
+# ==========================================
+# Experimental rhythm-analysis scripts
+# ==========================================
+
+check_svt_mof.py
+clean_duplicate_records.py
+create_balanced_dataset.py
+download_headers.py
+inspect_duplicate_headers.py
+inspect_failed_rhythm_records.py
+inspect_patient_metadata.py
+inspect_rhythm_issues.py
+remove_failed_svt.py
+test_failed_records_all_leads.py
+test_mof_windows.py
+test_rhythm_qrs.py
+validate_rhythm_features.py
+
+experiments/analyze_af_afib.py
+experiments/analyze_af_afib_features.py
+experiments/analyze_atrial_features_train.py
+experiments/analyze_atrial_record_level.py
+experiments/analyze_rhythm_features.py
+experiments/extract_atrial_features_train.py
+experiments/extract_pca_features.py
+experiments/plot_atrial_frequency_distribution.py
+experiments/test_asvc_atrial_activity.py
+experiments/test_beat_classifier_on_rhythm.py
+experiments/test_pca_atrial_activity.py
+experiments/train_rhythm_baseline.py
+experiments/train_rhythm_comparison.py
+experiments/train_rhythm_multilead_rf.py
+experiments/train_rhythm_reduced.py
+experiments/train_rhythm_stronger_models.py
+experiments/validate_asvc_broader.py
+experiments/validate_atrial_addition.py
+experiments/validate_rhythm_random_forest.py
+
+
+# ==========================================
+# Temporary Streamlit files
+# ==========================================
+
+app/temp/
+
+
+# ==========================================
+# Generated PCA plots
+# ==========================================
+
+experiments/pca_atrial_plots/
+
+
+# ==========================================
 # Old / experimental models
+# ==========================================
+
 models/*.joblib
 models/*.pkl
 models/*.csv
@@ -35,47 +200,20 @@ models/stage1_xgboost.joblib
 models/stage2_xgboost.joblib
 models_improved/
 
-# Keep only the final XGBoost model
+
+# ==========================================
+# Final rhythm model
+# ==========================================
+
+!models/final_rhythm_rf_model.pkl
+!models/final_rhythm_feature_names.json
+
+
+# ==========================================
+# Final beat-level XGBoost model
+# ==========================================
+
 !models/final_xgboost/
 !models/final_xgboost/*.json
 !models/final_xgboost/*.pkl
 !models/final_xgboost/*.csv
-
-
-# Large experiment prediction dumps
-experiments/results/cross_validation/patient_cv_out_of_fold_predictions.csv
-experiments/results/roc_pr_analysis/patient_cv_oof_probabilities.csv
-experiments/results/error_analysis/all_misclassified_samples.csv
-
-# Rhythm dataset and generated feature files
-data/ecg-arrhythmia-full.zip
-data/rhythm_features.csv
-data/rhythm_features_balanced.csv
-data/rhythm_train.csv
-data/rhythm_val.csv
-data/rhythm_test.csv
-data/beat_derived_features.csv
-data/multilead_features.csv
-data/multilead_features_3115.csv
-data/rhythm_fusion_features.csv
-data/rhythm_multilead_fusion_features.csv
-data/rhythm_multilead_rf_oof_predictions.csv
-data/rhythm_multilead_rf_5fold_results.csv
-data/rhythm_rf_oof_predictions.csv
-data/rhythm_rf_5fold_results.csv
-
-# Generated analysis outputs
-data/af_afib_*.csv
-data/asvc_*.csv
-data/pca_*.csv
-data/final_rhythm_*.csv
-
-# Temporary Streamlit files
-app/temp/
-
-# Generated plots
-experiments/pca_atrial_plots/
-
-# Keep final rhythm model
-!models/final_rhythm_rf_model.pkl
-!models/final_rhythm_feature_names.json

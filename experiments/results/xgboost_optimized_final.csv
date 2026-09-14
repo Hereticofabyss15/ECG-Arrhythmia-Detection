@@ -1,2 +1,0 @@
-model,accuracy,balanced_accuracy,macro_precision,macro_recall,macro_f1
-XGBoost Hyperparameter Optimized,0.8309311600021412,0.6183293135571266,0.49386382894536424,0.6183293135571266,0.5280884602201497

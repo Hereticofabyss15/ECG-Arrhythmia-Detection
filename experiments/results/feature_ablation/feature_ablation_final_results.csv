@@ -1,2 +1,0 @@
-best_feature_group,num_features,validation_macro_f1,test_accuracy,test_balanced_accuracy,test_macro_precision,test_macro_recall,test_macro_f1
-All-features,54,0.6503099719113258,0.8791517368453259,0.5695581651453432,0.6037738584813978,0.5695581651453432,0.552749283599738
